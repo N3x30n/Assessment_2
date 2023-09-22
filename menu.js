@@ -32,7 +32,14 @@
 
 //CODE HERE
 
-
+const pizza = {
+name: 'Pepperoni Pizza',
+price: 6.99,
+category: 'Entree',
+popularity: 4,
+rating: 4.25,
+tags: ['Entree','Spicy','Non-gluten-free']
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let price = pizza.price
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,8 +81,8 @@
 */
 
 //CODE HERE
-
-
+let category = pizza.category
+// console.log(category)
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -88,7 +96,48 @@
 */
 
 //CODE HERE
-
+const foodArr = [
+    {
+        name: 'Glazed Donut',
+        price: 0.99,
+        category: "Breakfast",
+        popularity: 2,
+        rating: 4.5,
+        tags: ['Contains Gluten', 'Breakfast']
+    },
+    {
+        name: 'Avocado Toast',
+        price: 12.99,
+        category: 'Breakfast',
+        popularity: 3,
+        rating: 5,
+        tags: ['Contains Gluten', 'Vegan', 'Breakfast']
+    },
+    {
+        name: 'Blueberry Pancakes',
+        price: 11.99,
+        category: 'Breakfast',
+        popularity: 1,
+        rating: 5,
+        tags: ['Contains Gluten', 'Family Sized', 'Breakfast', 'Vegan']
+    },
+    {
+        name: 'Ribeye Steak',
+        price: 18.99,
+        category: 'Entree',
+        popularity: 4,
+        rating: 4,
+        tags: ['Entree', 'Dinner', 'Gluten-free']
+    },
+    {
+        name: 'French Onion Soup',
+        price: 8.99,
+        category: 'Appetizer',
+        popularity: 5,
+        rating: 3.5,
+        tags: ['Appetizer', 'Vegan', 'All-Day']
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,9 +154,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((arr) => arr.tags.includes('Breakfast'))
 
-
+// console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +198,11 @@
 */
 
 //CODE HERE
-
+const filterByProperty = foodArr.filter((element) => {
+    if (element.price < 13 && element.rating > 4){
+        return element
+    }
+})
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +212,4 @@
 */
 
 //CODE HERE
+console.log(filterByProperty)
