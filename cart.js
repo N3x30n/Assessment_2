@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,7 +54,10 @@ const cart = [
 */
 
 //CODE HERE
-
+function calcFinalPrice(total,coupon,tax){
+    total = total * (1+tax)
+    total -= coupon
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +82,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+The properties my customer is going to have are allergies because its important for restaurants to know if their customer is allergic to anything
+the second property my customer is going to have is age so the restaurant knows if the customer can drink alcohol
+The third property of my customer is going to food preference so the restaurant knows if the customer is vegan, pescetarian, or vegetarian
+the fourth property is going to be ordering take out or dine in
 */
 
 /*
@@ -88,3 +94,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    allergies: 'Nuts',
+    age: 22,
+    foodPreference: 'Does not eat pork',
+    orderStatus: 'Dine-in'
+}
